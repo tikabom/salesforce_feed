@@ -18,5 +18,3 @@ It has been registered on the Twitters developers site to use Application based 
 Supporting PHP wrapper twitter-api-php has been used to perform API requests in PHP. 
 
 ![Alt text](https://github.com/tikabom/salesforce_feed/blob/master/salesforce_feed/images/screenshot1.PNG "Init screen")
-
-![Alt text](https://github.com/tikabom/salesforce_feed/blob/master/salesforce_feed/images/screenshot2.PNG "Filter example")
