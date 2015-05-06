@@ -1,0 +1,118 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	width: 100%;
+}
+
+.header {
+	width: 50%;
+	margin-left: 25%;
+	position: fixed;
+	top: 0;
+	background: #dddddd;
+	padding: 1%;
+}
+
+.header-img {
+	width: 15%;
+	float: left;
+}
+
+	.header-img img {
+		width: 100%;
+	}
+
+.header-title {
+	width: 85%;
+	float: left;
+}
+
+	.header-title p {
+		padding-left: 5%;
+		font-family: 'Days One', sans-serif;
+		line-height: 0;
+	}
+	
+	.header-title .title {
+		font-size: 28px;		
+		color: #1798c1;
+	}
+	
+	.header-title .subtitle {
+		font-size: 40px;
+	}
+	
+	.search input {
+		width: 95%;
+		padding: 1% 2%;
+		font-size: 24px;
+		font-style: italic;
+		border-radius: 10px;
+	}
+	
+.envelope {
+	padding-top: 12%;
+	width: 50%;
+	margin-left: 25%;
+	font-family: 'Open Sans', sans-serif;
+}
+	.envelope ul {
+		list-style: none;
+		padding: 0;
+	}
+	
+		.envelope ul li {
+			padding: 2% 0 1% 0;
+			border-bottom: #cccccc solid 1px;
+		}
+	
+			.envelope ul li table {
+				width: 100%;
+			}
+		
+				.envelope ul li table a {
+					color: #27bcee;
+					text-decoration: none;
+				}
+				
+				.envelope ul li table a:hover {
+					color: #82dbf8;
+				}
+
+.tweet-user {
+	width: 20%;
+}
+	.tweet-user p{
+		line-height: 1;
+		margin: 0;
+	}
+	
+	.tweet-user .user-screen-name {
+		font-size: 12px;
+	}
+
+.tweet-content {
+	width: 80%;
+	font-family: 'Helvetica';
+}
+	.tweet-content p {
+		line-height: 1.2;
+		margin: 0;
+	}
+
+	.tweet-content .text {
+		font-size: 20px; 
+	}
+	
+	.tweet-content .count {
+		text-align: right;
+		font-size: 14px;
+	}
+	
+.processing {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 35px;
+	display: none;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Salesforce - Twitter Feed</title>
+		
+		<script type="text/javascript" src="scripts/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="scripts/underscore-min.js"></script>
+		<script type="text/javascript" src="scripts/backbone-min.js"></script>
+		<script type="text/javascript" src="scripts/models/tweet.js"></script>
+		<script type="text/javascript" src="scripts/collections/tweets.js"></script>
+		<script type="text/javascript" src="scripts/views/feed.js"></script>
+		<script type="text/javascript" src="scripts/views/search.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Days+One" />
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-img">
+				<img alt="Twitter_icon" src="images/Twitter_icon.png" />
+			</div>
+			<div class="header-title">
+				<p class="title">salesforce</p>
+				<p class="subtitle">feed reader</p>
+			</div>
+			<div class="search">
+				<input id="search" type="text" placeholder="search" />
+			</div>
+		</header>
+		<div class="envelope">		
+				<ul id="tweets"></ul>
+				<img class="processing" src="images/progression.gif" />
+		</div>
+		<script id="tweet-template" type="text/template" >
+			<li>
+				<table>
+					<tr>
+						<td class="tweet-user">
+							<div>
+								<img src=<%= user_profile_img_url %> />
+								<p class="user-name"><b><%= user_name %></b></p>
+								<p class="user-screen-name"><i>@<%= user_screen_name %></i></p>
+							</div>
+						</td>
+						<td class="tweet-content">
+							<div>
+								<p class="text"><%= tweet_content %></p>
+								<p class="count">
+									<img src="images/retweet.png" height="14px"/>
+									<%= retweet_count %>
+								</p>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</li>
+		</script>
+	</body>
+</html>
