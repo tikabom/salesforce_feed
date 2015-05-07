@@ -16,8 +16,25 @@ switch($httpMethod) {
 		$count = count($params);
 		if(count($params) > 0) {
 			if($params[$count - 1] == "tweets") {
-				$feed = new TwitterFeed();
-				echo $feed->get_feed();
+				
+				/**
+				 * obtain app config args from
+				 * configuration file: config.ini
+				 */
+				$ini_array = parse_ini_file("config.ini");
+				
+				$access_token = $ini_array["access_token"];				
+				$access_token_secret = $ini_array["access_token_secret"];
+				$consumer_key = $ini_array["consumer_key"];
+				$consumer_secret = $ini_array["consumer_secret"];
+				
+				$screen_name = $ini_array["screen_name"];
+				$count = $ini_array["count"];
+				
+				$feed = new TwitterFeed($access_token, $access_token_secret, 
+						$consumer_key, $consumer_secret);
+				
+				echo $feed->get_feed($screen_name, $count);
 			}
 			else {
 				http_response_code(405);

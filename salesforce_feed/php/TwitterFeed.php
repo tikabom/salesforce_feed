@@ -31,20 +31,20 @@ class TwitterFeed {
 	 */
 	private $consumer_secret;
 	
-	function __construct(){
-		$this->access_token = "474453436-qZ7MTuKMCMoI8Vp0mzZx7RH5iYJbcgfNFuCtG3GV";
-		$this->access_token_secret = "eOs4ExucxAq9H1PQCJwcGkq0gb7QMJu7WZWPwQazHriqu";
-		$this->consumer_key = "YkwMxref8IbIh4Xf4VDtgN580";
-		$this->consumer_secret = "xaeGSpyRg9x41lXJGVzBNIhmDjx0wSxGfow0K6FRz6CFiMw9ez";
+	function __construct($access_token, $access_token_secret, $consumer_key, $consumer_secret){
+		$this->access_token = $access_token;
+		$this->access_token_secret = $access_token_secret;
+		$this->consumer_key = $consumer_key;
+		$this->consumer_secret = $consumer_secret;
 	}
 	
 	/**
 	 * Returns the 10 more recent tweets for salesforce screen name
 	 * @return json
 	 */
-	function get_feed() {
+	function get_feed($screen_name, $count) {
 		$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-		$params = '?screen_name=salesforce&count=10';
+		$params = '?screen_name=' . $screen_name . '&count=' . $count;
 		$method = 'GET';
 		
 		$settings = array(
