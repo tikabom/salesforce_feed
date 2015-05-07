@@ -16,3 +16,5 @@ This application's Front End has been created using Backbone for an MVC client-s
 It has been registered on the Twitters developers site to use Application based authentication (no user sign-in required, credentials created for the application to be authenticated on the Twitter REST API with Read and Write permissions). Application credentials, screen name and count (of tweets) have been hard-coded for simplicity. 
 
 Supporting PHP wrapper twitter-api-php has been used to perform API requests in PHP. 
+
+![Alt text](https://github.com/tikabom/salesforce_feed/blob/master/salesforce_feed/images/screenshot1.PNG "Init screen")
