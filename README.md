@@ -17,4 +17,8 @@ It has been registered on the Twitters developers site to use Application based 
 
 Supporting PHP wrapper twitter-api-php has been used to perform API requests in PHP. 
 
+EDIT (5/7)
+Added config.ini to hold Twitter API authorization parameters and the screen name, count for the GET user timeline request.
+(to improve code reusability)
+
 ![Alt text](https://github.com/tikabom/salesforce_feed/blob/master/salesforce_feed/images/screenshot1.PNG "Init screen")
